@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2? family= Lato & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Averia+Serif+Libre & display=swap');
+:root {
+  --background-color: #0c0c0c;
+  --primary-color: #cfcfcf;
+  --secondary-color: #696d59;
+  --terciary-color: #8e9580;
+}
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+li {
+  list-style: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+img,
+button {
+  cursor: pointer;
+}
+#mobile {
+  display: none;
+}
+#mobile-recomendation {
+  display: none;
+}
+.promo-mobile {
+  display: none;
+}
+header {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+}
+#principal {
+  width: 100%;
+  display: flex;
+}
+#principal > img {
+  width: 20vw;
+  object-fit: cover;
+}
+.nav-list {
+  font-size: 0.9vw;
+  margin: 1.5rem;
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+#identificador {
+  margin: 10px;
+  align-items: center;
+}
+.nav-list > li:last-child > img {
+  width: 2vw;
+  border-radius: 6px;
+}
+main {
+  background-color: var(--secondary-color);
+  width: 100%;
+  padding-top: 7svh;
+}
+.promo {
+  color: var(--primary-color);
+  width: 100%;
+  height: 80vh;
+  padding: 2rem;
+  padding-top: 10vh;
+  background-image: url(https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYiDoZoSmnnGMhW5m3bUQMd7LvvgEvV9x-CSj6SFYauSIvgVJz4tKT5lIHWR_ipPrVkSTtQpl41ARwl0-QGJkUlXfeSfZ-A0QRRM.jpg?r=b82);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.promo > h2 {
+  font-family: 'Averia Serif Libre', serif;
+  font-size: 3rem;
+  padding: 1rem;
+}
+.promo > p {
+  font-weight: bold;
+  width: 35%;
+  padding: 1rem;
+}
+.promo > button {
+  font-weight: bold;
+  color: var(--background-color);
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 10rem;
+  border-radius: 6px;
+}
+#info {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+#play::before {
+  content: '▶';
+}
+.recomendations {
+  width: 100%;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+#comedia > h2 {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+}
+.list {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+}
+.list::-webkit-scrollbar {
+  display: none;
+}
+.list > li:hover {
+  scale: 1.5;
+  transition: ease-in-out 0.5s;
+}
+.list > li > img {
+  border-radius: 5px;
+  margin: 3px;
+  width: 10rem;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+#drama > h2 {
+  padding: 2rem 2.5rem;
+  font-size: 1rem;
+}
+#ciencia-ficcion > h2 {
+  padding: 2rem 2.5rem;
+  font-size: 1rem;
+}
+.mobile-footer {
+  display: none;
+}
+.desktop-footer {
+  background-color: var(--background-color);
+  color: var(--terciary-color);
+}
+.social-media {
+  margin-left: 9rem;
+  display: flex;
+  padding: 2rem;
+  gap: 30px;
+}
+.social-media > li > img {
+  width: 50px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.info {
+  margin-left: 9rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrapper {
+  font-size: 0.8rem;
+  font-weight: 400;
+  width: 30%;
+  margin-right: 2%;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: start;
+}
+
+.desktop-footer > button {
+  background-color: var(--background-color);
+  color: var(--terciary-color);
+  padding: 0.8rem;
+  border: 2px solid var(--terciary-color);
+  margin-left: 11.5rem;
+}
+.copyright {
+  padding: 1rem 0 1rem 11.5rem;
+}
+.copyright > span {
+  font-size: 0.7rem;
+}
+@media (max-width: 700px) {
+  #principal {
+    display: none;
+  }
+  .nav-list {
+    display: none;
+  }
+  #mobile {
+    display: flex;
+  }
+  #mobile > img {
+    object-fit: cover;
+    height: 80%;
+    padding: 1svh 0 0 10svw;
+  }
+
+  #mobile > button {
+    padding-left: 50vw;
+    background-color: var(--background-color);
+    border: none;
+    height: 80%;
+    width: 8rem;
+  }
+  .promo {
+    display: none;
+  }
+  .promo-mobile {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+  }
+  .promo-mobile > h2 {
+    color: var(--primary-color);
+    margin: 5svw 7svw;
+    font-family: 'Averia Serif Libre', serif;
+  }
+  .buttons {
+    margin: 2svw 7svw;
+  }
+  .buttons > button {
+    font-weight: bold;
+    color: var(--background-color);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 8rem;
+    border-radius: 6px;
+  }
+
+  .promo-mobile > img {
+    max-width: 80%;
+    margin: 5svw 7svw;
+    border-radius: 8px;
+  }
+  #comedia > h2,
+  #drama > h2,
+  #ciencia-ficcion > h2 {
+    padding: 1rem 1rem;
+  }
+  .list {
+    padding: 0;
+  }
+  .mobile-footer {
+    display: block;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+  }
+  .mobile-footer > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+  }
+  .mobile-footer > ul > li {
+    font-size: 10px;
+  }
+  #mi-netflix {
+    width: 4vw;
+    border-radius: 4px;
+  }
+  .desktop-footer {
+    display: none;
+  }
+}
